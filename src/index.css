@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer utilities {
+  .prose {
+    @apply text-slate-700 leading-relaxed;
+  }
+
+  .prose p {
+    @apply mb-4;
+  }
+
+  .prose ul {
+    @apply list-disc pl-6 mb-4 space-y-2;
+  }
+
+  .prose strong {
+    @apply font-semibold text-slate-900;
+  }
+
+  .prose a {
+    @apply text-teal-600 hover:text-teal-700 underline;
+  }
+}
