@@ -26,10 +26,6 @@ export default function Cookies() {
             Cookie Policy
           </motion.h1>
 
-          <motion.p variants={fadeInUp} className="text-lg text-slate-600 mb-2">
-            Last updated: October 25, 2025
-          </motion.p>
-
           <motion.p variants={fadeInUp} className="text-slate-700 mb-8 leading-relaxed">
             This Cookie Policy explains how Gobustan Extrade LLC uses cookies and similar technologies on our website. 
             By using our website, you consent to our use of cookies as described in this policy.

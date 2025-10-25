@@ -22,10 +22,6 @@ export default function Privacy() {
             Privacy Policy
           </motion.h1>
 
-          <motion.p variants={fadeInUp} className="text-lg text-slate-600 mb-2">
-            Last updated: October 25, 2025
-          </motion.p>
-
           <motion.p variants={fadeInUp} className="text-slate-700 mb-8 leading-relaxed">
             At <strong>Gobustan Extrade LLC</strong>, we are committed to protecting your privacy and handling your
             personal information responsibly. This Privacy Policy explains how we collect, use, and safeguard your
