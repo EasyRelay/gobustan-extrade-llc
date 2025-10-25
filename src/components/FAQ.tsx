@@ -25,10 +25,6 @@ const faqs = [
     question: 'How can I track my shipment?',
     answer: 'Use our tracking tool on the website by entering your tracking number. You can also contact your dedicated account manager or our customer service team for real-time updates.'
   },
-  {
-    question: 'What are your payment terms?',
-    answer: 'We offer flexible payment terms including net 30 for established accounts. New customers can pay via credit card, ACH transfer, or wire transfer. Contact us to discuss custom payment arrangements.'
-  }
 ];
 
 export default function FAQ() {
@@ -37,7 +33,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 bg-white">
+    <section id="faq" className="py-20 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

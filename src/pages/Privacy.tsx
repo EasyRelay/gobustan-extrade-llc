@@ -1,7 +1,13 @@
 import { motion } from 'framer-motion';
 import { fadeInUp } from '../utils/animations';
+import { useEffect } from 'react';
 
 export default function Privacy() {
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  })
+
   return (
     <div className="pt-32 pb-20 bg-slate-50 min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

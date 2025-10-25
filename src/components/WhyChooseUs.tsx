@@ -38,7 +38,7 @@ export default function WhyChooseUs() {
   const yWave = useTransform(scrollYProgress, [0, 1], [0, 10]);
 
   return (
-    <section className="relative py-28 overflow-hidden bg-gradient-to-b from-white via-slate-50 to-teal-50">
+    <section id="why-choose-us" className="relative py-28 overflow-hidden bg-gradient-to-b from-white via-slate-50 to-teal-50">
       {/* Animated wave background */}
       <motion.div
         style={{

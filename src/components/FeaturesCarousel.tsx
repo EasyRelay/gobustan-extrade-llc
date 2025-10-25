@@ -31,7 +31,7 @@ export default function FeaturesCarousel() {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section className="py-20 bg-slate-900 text-white">
+    <section id="features-carousel" className="py-20 bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

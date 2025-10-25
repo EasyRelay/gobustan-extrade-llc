@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -16,12 +16,12 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" aria-hidden="true" />
                 <span>364 Pinnacle Dr<br />Lake Orion, MI 48360</span>
               </p>
-              <p className="flex items-center gap-2">
+              {/* <p className="flex items-center gap-2">
                 <Phone className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
                 <a href="tel:+1234567890" className="hover:text-teal-400 transition-colors">
                   Contact Us
                 </a>
-              </p>
+              </p> */}
               <p className="flex items-center gap-2">
                 <Mail className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
                 <a
@@ -32,7 +32,7 @@ export default function Footer() {
                 </a>
               </p>
             </div>
-            <div className="flex gap-4 mt-4">
+            {/* <div className="flex gap-4 mt-4">
               <a
                 href="#"
                 className="p-2 bg-slate-800 hover:bg-teal-600 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500"
@@ -54,7 +54,7 @@ export default function Footer() {
               >
                 <Linkedin className="w-5 h-5" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           <div>
@@ -142,6 +142,7 @@ export default function Footer() {
 
         <div className="border-t border-slate-800 pt-8 text-center text-sm">
           <p>&copy; {new Date().getFullYear()} Gobustan Extrade LLC. All rights reserved.</p>
+          <p>Created by <a href='https://easyit.uz' target='_blank' rel='noopener noreferrer' className='hover:text-teal-400 transition-colors'>EasyIT</a></p>
         </div>
       </div>
     </footer>

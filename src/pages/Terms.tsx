@@ -1,7 +1,13 @@
 import { motion } from 'framer-motion';
 import { fadeInUp } from '../utils/animations';
+import { useEffect } from 'react';
 
 export default function Terms() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
+
   return (
     <div className="pt-32 pb-20 bg-slate-50 min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,7 +29,7 @@ export default function Terms() {
           </motion.p>
 
           <motion.p variants={fadeInUp} className="text-slate-700 mb-8 leading-relaxed">
-            These Terms of Service govern your use of Gobustan Extrade LLC's logistics services. 
+            These Terms of Service govern your use of Gobustan Extrade LLC's logistics services.
             Please read them carefully before using our services.
           </motion.p>
 
@@ -31,7 +37,7 @@ export default function Terms() {
           <motion.div variants={fadeInUp} className="mb-10">
             <h2 className="text-2xl font-semibold text-slate-900 mb-3">Acceptance of Terms</h2>
             <p className="text-slate-700 leading-relaxed">
-              By accessing and using the services provided by Gobustan Extrade LLC, you accept and agree to be bound by these Terms of Service. 
+              By accessing and using the services provided by Gobustan Extrade LLC, you accept and agree to be bound by these Terms of Service.
               If you do not agree to these terms, you should not use our services.
             </p>
             <p className="text-slate-700 leading-relaxed mt-3">
@@ -53,7 +59,7 @@ export default function Terms() {
               <li>Shipment tracking and reporting</li>
             </ul>
             <p className="text-slate-700 leading-relaxed mt-3">
-              Services are provided subject to availability and may vary based on location, cargo type, and other factors. 
+              Services are provided subject to availability and may vary based on location, cargo type, and other factors.
               Specific terms for each shipment will be outlined in the applicable shipping agreement or bill of lading.
             </p>
           </motion.div>
@@ -77,7 +83,7 @@ export default function Terms() {
           <motion.div variants={fadeInUp} className="mb-10">
             <h2 className="text-2xl font-semibold text-slate-900 mb-3">Pricing and Payment</h2>
             <p className="text-slate-700 leading-relaxed">
-              Pricing for our services is based on various factors including distance, cargo type, weight, volume, service level, and current market conditions. 
+              Pricing for our services is based on various factors including distance, cargo type, weight, volume, service level, and current market conditions.
               Quotes provided are estimates and may be subject to adjustment based on actual shipment characteristics.
             </p>
             <p className="text-slate-700 leading-relaxed mt-3">Payment terms:</p>
@@ -102,7 +108,7 @@ export default function Terms() {
               <li>We are not liable for indirect, consequential, or special damages</li>
             </ul>
             <p className="text-slate-700 leading-relaxed mt-3">
-              Customers are strongly encouraged to obtain appropriate cargo insurance. 
+              Customers are strongly encouraged to obtain appropriate cargo insurance.
               Claims for loss or damage must be filed in writing within the time periods specified by applicable law.
             </p>
           </motion.div>

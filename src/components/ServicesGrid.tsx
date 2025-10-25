@@ -105,13 +105,6 @@ export default function ServicesGrid() {
                   </li>
                 ))}
               </ul>
-              <a
-                href="#quote"
-                className="text-teal-600 font-semibold hover:text-teal-700 inline-flex items-center gap-1 group-hover:gap-2 transition-all focus:outline-none focus:ring-2 focus:ring-teal-500 rounded"
-              >
-                Learn more
-                <span aria-hidden="true">→</span>
-              </a>
             </motion.article>
           ))}
         </motion.div>

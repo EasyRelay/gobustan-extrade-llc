@@ -35,14 +35,14 @@ export default function Header() {
             <a href="#services" className="text-slate-700 hover:text-teal-600 transition-colors font-medium">
               Services
             </a>
-            <a href="#fleet" className="text-slate-700 hover:text-teal-600 transition-colors font-medium">
-              Fleet
+            <a href="#features-carousel" className="text-slate-700 hover:text-teal-600 transition-colors font-medium">
+              Features
             </a>
-            <a href="#tracking" className="text-slate-700 hover:text-teal-600 transition-colors font-medium">
-              Tracking
+            <a href="#testimonials" className="text-slate-700 hover:text-teal-600 transition-colors font-medium">
+              Testimonials
             </a>
-            <a href="#pricing" className="text-slate-700 hover:text-teal-600 transition-colors font-medium">
-              Pricing
+            <a href="#faq" className="text-slate-700 hover:text-teal-600 transition-colors font-medium">
+              FAQ
             </a>
             <a
               href="#quote"
