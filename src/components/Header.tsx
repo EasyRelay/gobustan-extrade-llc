@@ -1,19 +1,38 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Har bir section link bosilganda shu funksiya ishlaydi
+  const handleNavClick = (hash: string) => {
+    if (location.pathname === '/') {
+      // Agar allaqachon Home sahifada bo‘lsa
+      const el = document.querySelector(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Aks holda Home sahifaga o‘tib, keyin scroll qiladi
+      navigate('/');
+      setTimeout(() => {
+        const el = document.querySelector(hash);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <header
@@ -23,42 +42,29 @@ export default function Header() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
         <div className="flex items-center justify-between h-20 bg-slate-50">
-          <Link to="/" className="flex items-center gap-2 group" aria-label="Gobustan Extrade home">
-            <img src="/short-logo.png" alt="Gobustan Extrade" className="w-40 h-14 text-teal-600 group-hover:text-teal-700 transition-colors" aria-hidden="true" />
-            {/* <span className="text-xl font-bold text-slate-900">Gobustan Extrade</span> */}
+          <Link to="/" className="flex items-center gap-2 group">
+            <img src="/short-logo.png" alt="Gobustan Extrade" className="w-40 h-14" />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <Link to="/" className="text-slate-700 hover:text-teal-600 transition-colors font-medium">
-              Home
-            </Link>
-            <a href="#services" className="text-slate-700 hover:text-teal-600 transition-colors font-medium">
-              Services
-            </a>
-            <a href="#features-carousel" className="text-slate-700 hover:text-teal-600 transition-colors font-medium">
-              Features
-            </a>
-            <a href="#testimonials" className="text-slate-700 hover:text-teal-600 transition-colors font-medium">
-              Testimonials
-            </a>
-            <a href="#faq" className="text-slate-700 hover:text-teal-600 transition-colors font-medium">
-              FAQ
-            </a>
-            <a
-              href="#quote"
-              className="px-6 py-2.5 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-700 hover:-translate-y-0.5 active:translate-y-0 transition-all focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+            <button onClick={() => handleNavClick('#hero')} className="text-slate-700 hover:text-teal-600 font-medium">Home</button>
+            <button onClick={() => handleNavClick('#services')} className="text-slate-700 hover:text-teal-600 font-medium">Services</button>
+            <button onClick={() => handleNavClick('#features-carousel')} className="text-slate-700 hover:text-teal-600 font-medium">Features</button>
+            <button onClick={() => handleNavClick('#testimonials')} className="text-slate-700 hover:text-teal-600 font-medium">Testimonials</button>
+            <button onClick={() => handleNavClick('#faq')} className="text-slate-700 hover:text-teal-600 font-medium">FAQ</button>
+            <button
+              onClick={() => handleNavClick('#quote')}
+              className="px-6 py-2.5 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-700 transition-all"
             >
               Get a Quote
-            </a>
+            </button>
           </div>
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-slate-700 hover:text-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 rounded-lg"
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={isMenuOpen}
+            className="md:hidden p-2 text-slate-700 hover:text-teal-600"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
 
@@ -71,48 +77,17 @@ export default function Header() {
               className="md:hidden overflow-hidden"
             >
               <div className="py-4 space-y-3 border-t border-slate-200">
-                <Link
-                  to="/"
-                  className="block px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Home
-                </Link>
-                <a
-                  href="#services"
-                  className="block px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Services
-                </a>
-                <a
-                  href="#fleet"
-                  className="block px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Fleet
-                </a>
-                <a
-                  href="#tracking"
-                  className="block px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Tracking
-                </a>
-                <a
-                  href="#pricing"
-                  className="block px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Pricing
-                </a>
-                <a
-                  href="#quote"
-                  className="block mx-4 px-6 py-2.5 bg-teal-600 text-white text-center rounded-lg font-semibold hover:bg-teal-700 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
+                <button onClick={() => handleNavClick('#hero')} className="block px-4 py-2">Home</button>
+                <button onClick={() => handleNavClick('#services')} className="block w-full text-left px-4 py-2">Services</button>
+                <button onClick={() => handleNavClick('#fleet')} className="block w-full text-left px-4 py-2">Fleet</button>
+                <button onClick={() => handleNavClick('#tracking')} className="block w-full text-left px-4 py-2">Tracking</button>
+                <button onClick={() => handleNavClick('#pricing')} className="block w-full text-left px-4 py-2">Pricing</button>
+                <button
+                  onClick={() => handleNavClick('#quote')}
+                  className="block mx-4 px-6 py-2.5 bg-teal-600 text-white rounded-lg font-semibold"
                 >
                   Get a Quote
-                </a>
+                </button>
               </div>
             </motion.div>
           )}
