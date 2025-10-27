@@ -15,16 +15,13 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Har bir section link bosilganda shu funksiya ishlaydi
   const handleNavClick = (hash: string) => {
     if (location.pathname === '/') {
-      // Agar allaqachon Home sahifada bo‘lsa
       const el = document.querySelector(hash);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      // Aks holda Home sahifaga o‘tib, keyin scroll qiladi
       navigate('/');
       setTimeout(() => {
         const el = document.querySelector(hash);

@@ -4,9 +4,19 @@ import { fadeInUp } from '../utils/animations';
 
 export default function Hero() {
   return (
-    <section id='hero' className="relative pt-32 pb-20 bg-gradient-to-br from-slate-50 to-teal-50 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: "url('/truck-img.png')",
+      }}
+    >
+      {/* Overlay gradient for readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-teal-50/70 backdrop-blur-[2px]" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* LEFT SIDE CONTENT */}
           <motion.div
             initial="hidden"
             animate="visible"
@@ -22,14 +32,18 @@ export default function Hero() {
               variants={fadeInUp}
               className="text-5xl sm:text-6xl font-bold text-slate-900 mb-6 leading-tight"
             >
-              Global Logistics. <span className="text-teal-600">Local Reliability.</span>
+              Global Logistics.{' '}
+              <span className="text-teal-600">Local Reliability.</span>
             </motion.h1>
+
             <motion.p
               variants={fadeInUp}
-              className="text-xl text-slate-600 mb-8 leading-relaxed"
+              className="text-xl text-slate-700 mb-8 leading-relaxed max-w-xl"
             >
-              Fast, trackable freight — sea, air, and road — engineered for businesses of all sizes.
+              Fast, trackable freight — sea, air, and road — engineered for
+              businesses of all sizes.
             </motion.p>
+
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#quote"
@@ -40,6 +54,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
+          {/* RIGHT SIDE STATS BOXES */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -49,29 +64,36 @@ export default function Hero() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="bg-white rounded-2xl p-6 shadow-xl">
                 <div className="flex items-center justify-center w-12 h-12 bg-teal-100 rounded-xl mb-4">
-                  <Package className="w-6 h-6 text-teal-600" aria-hidden="true" />
+                  <Package className="w-6 h-6 text-teal-600" />
                 </div>
                 <p className="text-3xl font-bold text-slate-900 mb-1">99.8%</p>
                 <p className="text-sm text-slate-600">On-time Delivery</p>
               </div>
+
               <div className="bg-white rounded-2xl p-6 shadow-xl">
                 <div className="flex items-center justify-center w-12 h-12 bg-teal-100 rounded-xl mb-4">
-                  <Globe className="w-6 h-6 text-teal-600" aria-hidden="true" />
+                  <Globe className="w-6 h-6 text-teal-600" />
                 </div>
                 <p className="text-3xl font-bold text-slate-900 mb-1">50+</p>
                 <p className="text-sm text-slate-600">Countries</p>
               </div>
+
               <div className="bg-white rounded-2xl p-6 shadow-xl">
                 <div className="flex items-center justify-center w-12 h-12 bg-teal-100 rounded-xl mb-4">
-                  <Award className="w-6 h-6 text-teal-600" aria-hidden="true" />
+                  <Award className="w-6 h-6 text-teal-600" />
                 </div>
                 <p className="text-3xl font-bold text-slate-900 mb-1">15+</p>
                 <p className="text-sm text-slate-600">Years Experience</p>
               </div>
             </div>
+
             <div className="mt-6 bg-teal-600 rounded-2xl p-8 text-white shadow-xl">
-              <p className="text-lg font-semibold mb-2">Trusted by Industry Leaders</p>
-              <p className="text-teal-100">Delivering excellence across every mile</p>
+              <p className="text-lg font-semibold mb-2">
+                Trusted by Industry Leaders
+              </p>
+              <p className="text-teal-100">
+                Delivering excellence across every mile
+              </p>
             </div>
           </motion.div>
         </div>
