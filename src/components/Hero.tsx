@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Package, Globe, Award } from 'lucide-react';
+// import { Package, Globe, Award } from 'lucide-react';
+import { Package } from 'lucide-react';
 import { fadeInUp } from '../utils/animations';
 
 export default function Hero() {
@@ -61,16 +62,18 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="relative"
           >
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="bg-white rounded-2xl p-6 shadow-xl">
+            <div className="grid grid-cols-1 sm:grid-cols-1 gap-4">
+              <div className="bg-white rounded-2xl flex gap-2 p-6 shadow-xl">
                 <div className="flex items-center justify-center w-12 h-12 bg-teal-100 rounded-xl mb-4">
                   <Package className="w-6 h-6 text-teal-600" />
                 </div>
-                <p className="text-3xl font-bold text-slate-900 mb-1">99.8%</p>
-                <p className="text-sm text-slate-600">On-time Delivery</p>
+                <div>
+                  <p className="text-3xl font-bold text-slate-900 mb-1">99.8%</p>
+                  <p className="text-sm text-slate-600">On-time Delivery</p>
+                </div>
               </div>
 
-              <div className="bg-white rounded-2xl p-6 shadow-xl">
+              {/* <div className="bg-white rounded-2xl p-6 shadow-xl">
                 <div className="flex items-center justify-center w-12 h-12 bg-teal-100 rounded-xl mb-4">
                   <Globe className="w-6 h-6 text-teal-600" />
                 </div>
@@ -84,7 +87,7 @@ export default function Hero() {
                 </div>
                 <p className="text-3xl font-bold text-slate-900 mb-1">15+</p>
                 <p className="text-sm text-slate-600">Years Experience</p>
-              </div>
+              </div> */}
             </div>
 
             <div className="mt-6 bg-teal-600 rounded-2xl p-8 text-white shadow-xl">

@@ -1,28 +1,29 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Plane, Ship, Truck, Warehouse, FileCheck, Home } from 'lucide-react';
+// import { Plane, Ship, Warehouse, FileCheck, Home } from 'lucide-react';
+import { Truck } from 'lucide-react';
 import { staggerContainer, fadeInUp } from '../utils/animations';
 
 const services = [
-  {
-    icon: Plane,
-    title: 'Air Freight',
-    features: [
-      'Express and standard air cargo',
-      'Door-to-door delivery',
-      'Customs clearance coordination'
-    ]
-  },
-  {
-    icon: Ship,
-    title: 'Sea Freight',
-    features: [
-      'FCL and LCL shipping',
-      'Port-to-port and door-to-door',
-      'Competitive ocean rates'
-    ]
-  },
+  // {
+  //   icon: Plane,
+  //   title: 'Air Freight',
+  //   features: [
+  //     'Express and standard air cargo',
+  //     'Door-to-door delivery',
+  //     'Customs clearance coordination'
+  //   ]
+  // },
+  // {
+  //   icon: Ship,
+  //   title: 'Sea Freight',
+  //   features: [
+  //     'FCL and LCL shipping',
+  //     'Port-to-port and door-to-door',
+  //     'Competitive ocean rates'
+  //   ]
+  // },
   {
     icon: Truck,
     title: 'Road Transport',
@@ -32,33 +33,34 @@ const services = [
       'Real-time GPS tracking'
     ]
   },
-  {
-    icon: Warehouse,
-    title: 'Warehousing',
-    features: [
-      'Secure storage facilities',
-      'Inventory management systems',
-      'Cross-docking services'
-    ]
-  },
-  {
-    icon: FileCheck,
-    title: 'Customs Clearance',
-    features: [
-      'Import/export documentation',
-      'Duty and tax calculation',
-      'Regulatory compliance support'
-    ]
-  },
-  {
-    icon: Home,
-    title: 'Last Mile Delivery',
-    features: [
-      'Residential and commercial delivery',
-      'Scheduled delivery windows',
-      'Proof of delivery confirmation'
-    ]
-  }
+  // {
+  //   icon: Warehouse,
+  //   title: 'Warehousing',
+  //   features: [
+  //     'Secure storage facilities',
+  //     'Inventory management systems',
+  //     'Cross-docking services'
+  //   ]
+  // },
+  // {
+  //   icon: FileCheck,
+  //   title: 'Customs Clearance',
+  //   features: [
+  //     'Import/export documentation',
+  //     'Duty and tax calculation',
+  //     'Regulatory compliance support'
+  //   ]
+  // },
+  // {
+  //   icon: Home,
+  //   title: 'Last Mile Delivery',
+  //   features: [
+  //     'Residential and commercial delivery',
+  //     'Scheduled delivery windows',
+  //     'Proof of delivery confirmation'
+  //   ]
+  // }
+
 ];
 
 export default function ServicesGrid() {
