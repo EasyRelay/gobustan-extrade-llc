@@ -3,7 +3,6 @@ import ServicesGrid from '../components/ServicesGrid';
 import WhyChooseUs from '../components/WhyChooseUs';
 import FeaturesCarousel from '../components/FeaturesCarousel';
 import Testimonials from '../components/Testimonials';
-import FAQ from '../components/FAQ';
 import CTABar from '../components/CTABar';
 import { useEffect } from 'react';
 
@@ -20,7 +19,6 @@ export default function Home() {
       <WhyChooseUs />
       <FeaturesCarousel />
       <Testimonials />
-      <FAQ />
       <CTABar />
     </>
   );

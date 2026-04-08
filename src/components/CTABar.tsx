@@ -51,11 +51,7 @@ export default function CTABar() {
             variants={fadeInUp}
             className="mt-6 text-sm text-teal-100"
           >
-            By requesting a quote, you agree to our{' '}
-            <a href="/terms" className="underline hover:text-white focus:outline-none focus:text-white">
-              Terms of Service
-            </a>{' '}
-            and{' '}
+            By requesting a quote, you agree to our Terms of Service and{' '}
             <a href="/privacy" className="underline hover:text-white focus:outline-none focus:text-white">
               Privacy Policy
             </a>
