@@ -37,13 +37,13 @@ export default function Hero() {
               <span className="text-teal-600">Local Reliability.</span>
             </motion.h1>
 
-            <motion.p
+            {/* <motion.p
               variants={fadeInUp}
               className="text-xl text-slate-700 mb-8 leading-relaxed max-w-xl"
             >
               Fast, trackable freight — sea, air, and road — engineered for
               businesses of all sizes.
-            </motion.p>
+            </motion.p> */}
 
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
               <a
